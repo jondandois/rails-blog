@@ -8,7 +8,16 @@
   <div class="info">
     by <%= article.author_name %>
     on <%= article.created_at.strftime('%b %d, %Y') %>
+    <span>
+        <%= link_to 'Delete Article', article_path(article),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+    </span>
   </div>
   <div class="content"><%= article.content %></div>
 <% end %>
 </div>
+
+<h4>
+  <%= link_to 'New Article', new_article_path %>
+</h4>

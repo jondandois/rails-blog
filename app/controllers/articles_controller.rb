@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def edit
@@ -17,24 +18,32 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
 
-    @article.save
-    redirect_to @article
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
+    end
   end
 
   def update
     @article = Article.find(params[:id])
-    if @article.update_attributes(article_update_params)
+    if @article.update_attributes(article_params)
       redirect_to @article, notice: "Article has been updated."
     else
       render "edit"
     end
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to articles_path
+  end
+
   private
   def article_params
-    params.permit(:name, :content, :author_name)
-  end
-  def article_update_params
-    params[:article].permit(:name, :content, :author_name)
+    params.require(:article).permit(:name, :content, :author_name)
+
   end
 end
