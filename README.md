@@ -1,24 +1,8 @@
-# README
+## Example Rails Blog App for learning about authentication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is based off of the [RailsCasts blog app](http://railscasts.com/episodes/250-authentication-from-scratch-revised?autoplay=true), but upgraded in places for Rails 5.1 and Ruby 2.4.
 
-Things you may want to cover:
+### Version:
+  Rev `527ca78` lines up roughly with the 11:00 mark in RailCast #250
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
