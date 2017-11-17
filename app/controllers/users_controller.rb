@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
+      log_in @user
       redirect_to @user, notice: "Thank you for signing up!"
     else
       render "new"
