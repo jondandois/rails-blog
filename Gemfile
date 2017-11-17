@@ -12,6 +12,7 @@ end
 gem 'bcrypt', '~> 3.1.7'# Use ActiveModel has_secure_password
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.2' # Use CoffeeScript for .coffee assets and views
+gem 'devise'
 gem 'jbuilder', '~> 2.5' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem 'pg' # Use PostgreSQL as the database for Active Record
