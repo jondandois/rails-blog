@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :sessions
 
   resources :articles
-  root to: 'articles#index'
+  #root to: 'articles#index'
+  root to: 'welcome#index'
 end
