@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Article.create(name: 'Foo', author_name: 'Bar', content: 'Omniauth is a pretty simple solution if you want your users to authenticate using oauth and openid providers. Its based on the principle that')
